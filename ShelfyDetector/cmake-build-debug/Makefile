@@ -123,6 +123,33 @@ ShelfyDetector/fast:
 	$(MAKE) -f CMakeFiles/ShelfyDetector.dir/build.make CMakeFiles/ShelfyDetector.dir/build
 .PHONY : ShelfyDetector/fast
 
+Detector.o: Detector.cpp.o
+
+.PHONY : Detector.o
+
+# target to build an object file
+Detector.cpp.o:
+	$(MAKE) -f CMakeFiles/ShelfyDetector.dir/build.make CMakeFiles/ShelfyDetector.dir/Detector.cpp.o
+.PHONY : Detector.cpp.o
+
+Detector.i: Detector.cpp.i
+
+.PHONY : Detector.i
+
+# target to preprocess a source file
+Detector.cpp.i:
+	$(MAKE) -f CMakeFiles/ShelfyDetector.dir/build.make CMakeFiles/ShelfyDetector.dir/Detector.cpp.i
+.PHONY : Detector.cpp.i
+
+Detector.s: Detector.cpp.s
+
+.PHONY : Detector.s
+
+# target to generate assembly for a file
+Detector.cpp.s:
+	$(MAKE) -f CMakeFiles/ShelfyDetector.dir/build.make CMakeFiles/ShelfyDetector.dir/Detector.cpp.s
+.PHONY : Detector.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ShelfyDetector"
+	@echo "... Detector.o"
+	@echo "... Detector.i"
+	@echo "... Detector.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

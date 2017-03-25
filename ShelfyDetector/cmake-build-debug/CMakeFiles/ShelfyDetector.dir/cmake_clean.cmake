@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ShelfyDetector.dir/main.cpp.o"
-  "ShelfyDetector.pdb"
-  "ShelfyDetector"
+  "CMakeFiles/ShelfyDetector.dir/Detector.cpp.o"
+  "../bin/ShelfyDetector.pdb"
+  "../bin/ShelfyDetector"
 )
 
 # Per-language clean rules from dependency scanning.
