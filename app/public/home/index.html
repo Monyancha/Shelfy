@@ -1,28 +1,28 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en" style="height:100%;">
-    <head> 
-        <meta charset="utf-8"> 
-        <title>Pinegrow Bootstrap Blocks</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <head>
+        <meta charset="utf-8">
+        <title>Shelfie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="pinegrow, blocks, bootstrap" />
         <meta name="description" content="My new website" />
-        <link rel="shortcut icon" href="ico/favicon.png"> 
-        <!-- Core CSS -->         
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <link rel="shortcut icon" href="ico/favicon.png">
+        <!-- Core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet">
-        <!-- Style Library -->         
+        <!-- Style Library -->
         <link href="css/style-library-1.css" rel="stylesheet">
         <link href="css/plugins.css" rel="stylesheet">
         <link href="css/blocks.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->         
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
         <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
-    <![endif]-->         
-    </head>     
+    <![endif]-->
+    </head>
     <body data-spy="scroll" data-target="nav">
         <header id="header-1" class="soft-scroll header-1">
             <!-- Navbar -->
@@ -36,9 +36,11 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#">
-                            <img src="images/brand/pgblocks-logo-white-nostrap.png" class="brand-img img-responsive">
-                        </a>
+                        <div class="logotop">
+                          <a href="#">
+                              <img id="logoImage" src="images/Shelfie_logo.png" class="brand-img img-responsive">
+                          </a>
+                        </div>
                     </div>
                     <!-- Navigation -->
                     <div class="collapse navbar-collapse">
@@ -67,9 +69,9 @@
                                     <li>
                                         <a href="#">Dropdown 4</a>
                                     </li>
-                                </ul>                                 
+                                </ul>
                             </li>
-                            <!--//dropdown-->                             
+                            <!--//dropdown-->
                             <li class="nav-item">
                                 <a href="#">Contact</a>
                             </li>
@@ -84,9 +86,7 @@
         </header>
         <section id="promo-3" class="content-block promo-3 min-height-600px bg-deepocean">
             <div class="container text-center">
-                <h1>Rocket Fuel for Web Designers</h1>
-                <h2>Pinegrow Blocks</h2>
-                <a href="#" class="btn btn-outline btn-outline-xl outline-light">Made with <span class="fa fa-heart pomegranate"></span> on Planet Earth</a>
+                <h1>Always stocked and loaded</h1>
             </div>
             <!-- /.container -->
         </section>
@@ -95,30 +95,30 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="underlined-title">
-                            <h1>Every service under one roof</h1>
+                            <h1>Give your customers the beer they deserve</h1>
                             <hr>
                         </div>
                         <div class="services-wrapper">
                             <div class="col-md-4">
                                 <div class="icon bg-crete">
-                                    <span class="fa fa-laptop"></span>
+                                    <span class="fa fa-check"></span>
                                 </div>
-                                <h4>Digital Design</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+                                <h4>Guaranteed inventory</h4>
+                                <p>Know when your product stock in running low with live updates. Customers will always find your products on the shelf</p>
                             </div>
                             <div class="col-md-4">
                                 <div class="icon bg-finn">
-                                    <span class="fa fa-code"></span>
+                                    <span class="fa fa-black-tie"></span>
                                 </div>
-                                <h4>Web Development</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+                                <h4>Presentation is the key</h4>
+                                <p>Detect the layout of your brands on the shelf. Ensure that your products are presented with class</p>
                             </div>
                             <div class="col-md-4">
                                 <div class="icon bg-sunflower">
-                                    <span class="fa fa-rocket"></span>
+                                    <span class="fa fa-eye"></span>
                                 </div>
-                                <h4>Creative Direction</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem.</p>
+                                <h4>Sales Forecasting</h4>
+                                <p>Use trend analytics to determine days of high demand. Distribute your products efficiently and target the preferred brands</p>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
         </section>
         <section id="content-1-1" class="content-block content-1-1 min-height-600px bg-white">
             <div class="container text-center">
-                <h1>Freedom to express your creativity</h1>
+                <h1>Let's begin perfecting our craft</h1>
                 <div class="col-sm-8 col-sm-offset-2">
                     <p class="lead">We don't want to overload you with hundreds of styles you don't want, or need. We give you a strong base to express your own creativity.</p>
                 </div>
@@ -167,10 +167,49 @@
             </nav>
             <!-- /.nav -->
         </header>
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>         
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>         
+        <section class="content-block-nopad bg-deepocean footer-wrap-1-3" data-pg-collapsed>
+            <div class="container footer-1-3">
+                <div class="col-md-4 pull-left">
+                    <img src="images/Shelfie_logo.png" class="brand-img img-responsive">
+                    <ul class="social social-light">
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-google-plus"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-behance"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-2x fa-dribbble"></i></a>
+                        </li>
+                    </ul>
+                    <!-- /.social -->
+                </div>
+                <div class="col-md-3 pull-right">
+                    <p class="address-bold-line">We <i class="fa fa-heart pomegranate"></i> our amazing customers</p>
+                    <p class="address small">
+					123 Anywhere Street,<br>
+					London,<br>
+					LO4 6ON</p>
+                </div>
+                <div class="col-xs-12 footer-text">
+                    <p>Please take a few minutes to read our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
+                </div>
+            </div>
+            <!-- /.container -->
+        </section>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>
         <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-        <script type="text/javascript" src="js/bskit-scripts.js"></script>         
-    </body>     
+        <script type="text/javascript" src="js/bskit-scripts.js"></script>
+    </body>
 </html>
