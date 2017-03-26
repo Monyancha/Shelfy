@@ -20,11 +20,9 @@ class Detector {
 public:
     Detector();
 
-    int loadImage(int count, string filename);
+    int loadImage(string filepath, string outputDir);
 
     std::vector<Vec3f> detectCircles(Mat image);
-
-    Mat getGrayImage(Mat mat);
 
     void showImageWithCircles(string mat, Mat vector, std::vector <Vec3f> vector1);
 
@@ -32,15 +30,14 @@ private:
     string grayWindowName = "Gray Window";
     string colorWindowName = "Color Window";
     string featureWindowName = "Feature Window";
-    bool createDatasetMode = false;
+    bool createDatasetMode = true;
 
     int cushion = 80;
 
     void writeImage(string string, Mat img);
 
-    int supervisedDatasetCreation(int frameCount, int featureCount, Mat img);
-
     void cannyThreshold(Mat &img, Mat &grayImg);
+
 };
 
 

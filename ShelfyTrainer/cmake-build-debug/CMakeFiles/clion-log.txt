@@ -1,0 +1,4 @@
+/home/sajarora/Software/clion-2016.3.5/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sajarora/Development/Shelfy/ShelfyDetector
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sajarora/Development/Shelfy/ShelfyDetector/cmake-build-debug

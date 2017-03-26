@@ -25,16 +25,71 @@ Project:
 Author: Saj Arora
 Description: 
 """
+import json
+import os
+from time import sleep
 
-import numpy as np
-import cv2
+import requests
+import shutil
+import subprocess
+
+from os.path import isfile, join
+from watson_developer_cloud import VisualRecognitionV3
+visual_recognition = VisualRecognitionV3('2016-05-20', api_key='560a0c1d4a0f495fb1893a66acb8b5ef77e226b7')
+
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+shelfyDetector = os.path.join(dir_path, "..", "ShelfyDetector", "bin", "ShelfyDetector")
+image = os.path.join(dir_path, "image.jpg")
+params = os.path.join(dir_path, "params.json")
+output = os.path.join(dir_path, "result")
+
+classifier_id = "beer_bottle_labels_919488873"
 
 def run():
-    img = cv2.imread('image.jpg', 0)
+    print "Starting server..."
+    while (True):
+        cleanOutputDir()
+        print "Capturing image..."
+        r = requests.get('http://10.0.150.149:5000/getImage', stream=True)
+        if r.status_code == 200:
+            with open('./image.jpg', 'wb') as f:
+                for chunk in r.iter_content(4024):
+                    f.write(chunk)
+        print 'Image updated from server...Processing.'
+        # # call the c++ program
+        result = subprocess.call([shelfyDetector, image, output])
+        if (int(result) == 2):
+            files = [(join(output, f)) for f in os.listdir(output) if isfile(join(output, f))]
+            for file in files:
+                beer, confidence = classifyImage(file)
+                print beer, confidence
 
-    cv2.imshow('image', img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+def cleanOutputDir():
+    print "Clean previous dataset..."
+    [os.unlink(join(output, f)) for f in os.listdir(output) if isfile(join(output, f))]
+
+
+
+def classifyImage(imagePath):
+    with open(imagePath) as f:
+        result = (visual_recognition.classify(
+            images_file=f, classifier_ids=[classifier_id]))
+    return processResult(result)
+
+def processResult(result):
+    beerType = None
+    confidence = 0
+    if result and 'images' in result:
+        for image in result.get('images'):
+            if 'classifiers' in image and len(image.get('classifiers')) > 0:
+                beerClassifier = image.get('classifiers')[0]
+                if 'classes' in beerClassifier and len(beerClassifier.get('classes')) > 0:
+                    beerType = beerClassifier.get('classes')[0].get('class')
+                    confidence = beerClassifier.get('classes')[0].get('score')
+
+    return beerType, confidence
+
 
 
 if __name__=='__main__':
