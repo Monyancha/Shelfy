@@ -1,3 +1,43 @@
-<h1>
-  {{title}}
-</h1>
+<header id="header-1" class="soft-scroll header-1">
+  <!-- Navbar -->
+  <nav class="main-nav navbar-fixed-top headroom headroom--pinned">
+    <div class="container">
+      <!-- Brand and toggle -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+        <div class="logotop">
+          <a routerLink="/">
+            <img id="logoImage" src="/assets/images/Shelfie_logo.png" class="brand-img img-responsive">
+          </a>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/index">Home</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/tracker">Tracker</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/market">Market</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/contact">Contact</a>
+          </li>
+        </ul>
+        <!--//nav-->
+      </div>
+      <!--// End Navigation -->
+    </div>
+    <!--// End Container -->
+  </nav>
+  <!--// End Navbar -->
+</header>
+<router-outlet></router-outlet>

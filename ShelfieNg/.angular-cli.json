@@ -19,15 +19,26 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "bootstrap/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "bootstrap/block-css/style-library-1.css",
+        "bootstrap/block-css/plugins.css",
+        "bootstrap/block-css/blocks.css",
+        "bootstrap/block-css/custom.css",
+        "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "bootstrap/js/html5shiv.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
     }
+  ],
+  "addons": [
+    "../node_modules/font-awesome/fonts/*.+(otf|eot|svg|ttf|woff|woff2)"
   ],
   "e2e": {
     "protractor": {
@@ -51,7 +62,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }

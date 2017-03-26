@@ -32,11 +32,13 @@ private:
     string featureWindowName = "Feature Window";
     bool createDatasetMode = true;
 
-    int cushion = 80;
+    int cushion = 150;
 
     void writeImage(string string, Mat img);
 
     void cannyThreshold(Mat &img, Mat &grayImg);
+
+    bool waitAfter = false;
 
 };
 

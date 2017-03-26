@@ -1,0 +1,65 @@
+.promo-3 {
+    h3 {
+        color: #fff;
+        font-size: 3em;
+    }
+}
+
+.background-box {
+    background-image: url('/assets/images/empty-box.png');
+    background-size: 100%;
+    width: 900px;
+    height: 550px;
+    background-position-x: -20px;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 30px;
+    .top {
+        position: absolute;
+        top: 50px;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 35px;
+    }
+    .left {
+        left: 100px;
+    }
+    .right {
+        right: 90px;
+    }
+    .middle {
+        width: 100%;
+        text-align: center;
+        .bottle {
+            margin: 0 auto;
+        }
+    }
+    .stella {
+        background: url('/assets/images/stella-top.png');
+        background-size: 100%;
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        left: 5px;
+        background-repeat: no-repeat;
+    }
+    .shocktop {
+        background: url('/assets/images/shocktop-top.png');
+        background-size: 100%;
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        left: 5px;
+        background-repeat: no-repeat;
+    }
+}
+
+.bottle {
+    background-image: url('/assets/images/bottle-top.png');
+    background-size: 100%;
+    width: 220px;
+    height: 220px;
+    position: relative;
+    background-repeat: no-repeat;
+}
