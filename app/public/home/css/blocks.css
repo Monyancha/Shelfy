@@ -146,7 +146,17 @@ Version: 1.0
 .brand-img
 {
     width: 150px;
-    height:auto;
+    height:150px;
+    padding: 20px 0;
+    border: 5px solid white;
+    background: #f39b30;
+    margin-top: 30px;
+}
+
+.brand-img-footer
+{
+    width: 80px;
+    height:80px;
     padding: 20px 0;
     border: 5px solid white;
     background: #f39b30;
