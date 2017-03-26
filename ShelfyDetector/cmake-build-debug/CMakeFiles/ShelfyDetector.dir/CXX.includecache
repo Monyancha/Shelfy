@@ -27,6 +27,8 @@ opencv2/imgproc.hpp
 /home/sajarora/Development/Shelfy/ShelfyDetector/main.cpp
 iostream
 -
+dirent.h
+-
 opencv2/imgcodecs.hpp
 /home/sajarora/Development/Shelfy/ShelfyDetector/opencv2/imgcodecs.hpp
 opencv2/highgui.hpp
