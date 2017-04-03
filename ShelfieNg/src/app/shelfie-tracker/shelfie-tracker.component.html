@@ -6,6 +6,11 @@
   <!-- /.container -->
 </section>
 
+<div class="container">
+  <button class="btn btn-lg btn-success" (click)="capture()">Live Capture</button>
+  <img *ngIf="liveImage" [src]="liveImage" class="live-image">
+</div>
+
 <div class="background-box">
   <div class="top left">
     <div class="bottle" *ngIf="item0_0">
@@ -15,26 +20,26 @@
   <div class="top middle">
     <div class="bottle" *ngIf="item0_1">
       <div [class.stella]="item0_1 === 'stella'" [class.shocktop]="item0_1 === 'shocktop'"></div>
-      </div>    
+    </div>
   </div>
   <div class="top right">
     <div class="bottle" *ngIf="item0_2">
       <div [class.stella]="item0_2 === 'stella'" [class.shocktop]="item0_2 === 'shocktop'"></div>
-      </div>    
+    </div>
   </div>
   <div class="bottom left">
     <div class="bottle" *ngIf="item1_0">
       <div [class.stella]="item1_0 === 'stella'" [class.shocktop]="item1_0 === 'shocktop'"></div>
-      </div>    
+    </div>
   </div>
   <div class="bottom middle">
     <div class="bottle" *ngIf="item1_1">
       <div [class.stella]="item1_1 === 'stella'" [class.shocktop]="item1_1 === 'shocktop'"></div>
-      </div>    
+    </div>
   </div>
   <div class="bottom right">
     <div class="bottle" *ngIf="item1_2">
       <div [class.stella]="item1_2 === 'stella'" [class.shocktop]="item1_2 === 'shocktop'"></div>
-      </div>    
+    </div>
   </div>
 </div>

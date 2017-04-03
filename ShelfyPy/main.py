@@ -70,7 +70,6 @@ def run():
                 print beer, confidence
 
         algorithm.run(dataset)
-        break
         sleep(2)
 
 def cleanOutputDir():

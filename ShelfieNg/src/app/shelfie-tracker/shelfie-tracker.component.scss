@@ -6,6 +6,7 @@
 }
 
 .background-box {
+    margin: 0 auto;
     background-image: url('/assets/images/empty-box.png');
     background-size: 100%;
     width: 900px;
@@ -62,4 +63,8 @@
     height: 220px;
     position: relative;
     background-repeat: no-repeat;
+}
+
+.live-image {
+    width: 100%;
 }

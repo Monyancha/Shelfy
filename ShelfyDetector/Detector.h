@@ -38,7 +38,7 @@ private:
 
     void cannyThreshold(Mat &img, Mat &grayImg);
 
-    bool waitAfter = false;
+    bool waitAfter = true;
 
 };
 

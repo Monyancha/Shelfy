@@ -14,8 +14,7 @@ Detector::Detector() {
 
 int Detector::loadImage(string filepath, string outputDir) {
     Mat img = imread(filepath, IMREAD_COLOR);
-    if(img.empty())
-    {
+    if (img.empty()) {
         return -1;
     }
     //![load]
@@ -28,8 +27,7 @@ int Detector::loadImage(string filepath, string outputDir) {
     showImageWithCircles(colorWindowName, img, circles);
 
     //extract logo potential from each circle detected
-    for( size_t i = 0; i < circles.size(); i++ )
-    {
+    for (size_t i = 0; i < circles.size(); i++) {
         Vec3i c = circles[i];
         Point topLeft(max(c[0] - c[2] - cushion, 0), max(c[1] - c[2] - cushion, 0));
         Point bottomRight(min(topLeft.x + 700, img.cols), min(topLeft.y + 700, img.rows));
@@ -41,11 +39,8 @@ int Detector::loadImage(string filepath, string outputDir) {
         writeImage(outputDir + "/image_" + to_string(c[0]) + "_" + to_string(c[1]) + ".jpg", ROI);
     }
 
-    if (waitAfter){
-        waitKey();
-    }
-
-    return circles.size() > 0 ? 2 : 0;
+    waitKey();
+    return int(circles.size());
 }
 
 vector<Vec3f> Detector::detectCircles(Mat gray) {
